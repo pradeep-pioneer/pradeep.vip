@@ -1,0 +1,44 @@
+<div class="text-editor-wrap">
+    <div class="title-bar">
+        <div class="title-bar-button">
+            <svg height="20" width="20">
+            <circle cx="10" cy="10" r="10" fill="rgb(255,68,77)" />
+            </svg>
+            <svg height="20" width="20">
+                <circle cx="10" cy="10" r="10" fill="rgb(255,197,0)" />
+            </svg>
+            <svg height="20" width="20">
+                <circle cx="10" cy="10" r="10" fill="rgb(0,207,63)" />
+            </svg>
+            <div class="title-bar-caption">
+                <span>pradeep.vip - bash - 80x10  © 2018 Pradeep Singh</span>
+            </div>
+        </div>
+    </div>
+    <div class="text-body shift-text">
+        $ <span typingAnimation [typeSpeed]="20" [startDelay]="2000" [hideCursorOnComplete]="true" (complete)= "onTypingAnimationComplete(0, true);">
+                {{introductions[0].IntroductionText}}
+        </span><br/>
+        <span [hidden]="introductions[0].HideResponse">{{introductions[0].IntroductionResponse}}</span><br/>
+        <span [hidden] = "introductions[1].Hidden">$</span>
+        <span typingAnimation [typeSpeed]="20" [startDelay]="2000" [hideCursorOnComplete]="true" [condition]="!introductions[1].Hidden" [hidden] = "introductions[1].Hidden" (complete)= "onTypingAnimationComplete(1, true);">
+                {{introductions[1].IntroductionText}}
+        </span><br/>
+        <span [hidden]="introductions[1].HideResponse">{{introductions[1].IntroductionResponse}}</span><br/>
+        <span [hidden] = "introductions[2].Hidden">$</span>
+        <span typingAnimation [typeSpeed]="20" [startDelay]="2000" [hideCursorOnComplete]="true" [condition]="!introductions[2].Hidden" [hidden] = "introductions[2].Hidden" (complete)= "onTypingAnimationComplete(2, true);">
+                {{introductions[2].IntroductionText}}
+        </span><br/>
+        <span [hidden]="introductions[2].HideResponse">{{introductions[2].IntroductionResponse}}</span><br/>
+        <span [hidden] = "introductions[3].Hidden">$</span>
+        <span typingAnimation [typeSpeed]="20" [startDelay]="2000" [condition]="!introductions[3].Hidden" [hidden] = "introductions[3].Hidden" (complete)= "onTypingAnimationComplete(3, false);">
+                {{introductions[3].IntroductionText}}
+        </span>
+    </div>
+</div>
+<div class="icon-wrap" [hidden]="hideContact">
+        <a href="https://github.com/pradeep-pioneer" target="1" [hidden]="hideContact"><i class="fab fa-github fa-7x icon github"></i></a>
+        <a href="https://www.youtube.com/channel/UCPi6jdWkht1pTkGsIXMtnQw" target="1" [hidden]="hideContact"><i class="fab fa-youtube fa-7x icon youtube"></i></a>
+        <a href="https://www.facebook.com/PradeepSingh786" target="1" [hidden]="hideContact"><i class="fab fa-facebook fa-7x icon facebook"></i></a>
+        <a href="mailto:contact@pradeep.vip" [hidden]="hideContact"><i class="fas fa-envelope fa-7x icon email"></i></a>
+</div>
