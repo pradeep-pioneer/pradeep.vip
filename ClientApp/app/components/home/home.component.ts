@@ -16,7 +16,7 @@ class IntroductionItem{
             this.HideResponse=false;
             if(showNext)
                 nextItem.showIt();
-        }, 2000);
+        }, 1000);
         
     }
 
@@ -26,7 +26,8 @@ class IntroductionItem{
 }
 @Component({
     selector: 'home',
-    templateUrl: './home.component.html'
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
     introductions:IntroductionItem[];
